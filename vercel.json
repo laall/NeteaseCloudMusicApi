@@ -6,6 +6,23 @@
       "use": "@vercel/node@2.5.10"
     }
   ],
+ "headers": [{
+    "source": "/(.*)",
+    "headers" : [
+      {
+        "key" : "Access-Control-Allow-Origin",
+        "value" : "*"
+      },
+      {
+        "key" : "Access-Control-Allow-Headers",
+        "value" : "content-type"
+      },
+      {
+        "key" : "Access-Control-Allow-Methods",
+        "value" : "DELETE,PUT,POST,GET,OPTIONS"
+      }
+    ]
+  }],
   "routes": [
     {
       "src": "/(.*)",
